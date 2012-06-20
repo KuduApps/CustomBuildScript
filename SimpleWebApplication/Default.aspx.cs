@@ -11,7 +11,11 @@ namespace SimpleWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+#if DEBUG
+            lbl.Text = "DEBUG";
+#else
+            lbl.Text = "RELEASE";
+#endif
         }
     }
 }
